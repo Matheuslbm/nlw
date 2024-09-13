@@ -1,0 +1,6 @@
+{
+  "dependencies": {
+    "@paralleldrive/cuid2": "^2.2.2",
+    "postgres": "^3.4.4"
+  }
+}
