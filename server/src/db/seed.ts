@@ -15,15 +15,12 @@ async function seed() {
 		])
 		.returning();
 
-        const startOfWeek = dayjs().startOf('week')
+	const startOfWeek = dayjs().startOf("week");
 
-	await db
-		.insert(goalCompletions)
-		.values([
-            { goalId: result[0].id, createdAt: startOfWeek.toDate() },
-            { goalId: result[1].id, createdAt: startOfWeek.add(1, 'day').toDate() },
-            
-        ]);
+	await db.insert(goalCompletions).values([
+		{ goalId: result[0].id, createdAt: startOfWeek.toDate() },
+		{ goalId: result[1].id, createdAt: startOfWeek.add(1, "day").toDate() },
+	]);
 }
 
 seed().finally(() => {

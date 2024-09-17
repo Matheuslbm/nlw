@@ -52,7 +52,8 @@ export async function getWeekPendingGoals() {
 		.leftJoin(
 			goalCompletionCounts,
 			eq(goalCompletionCounts.goalId, goalsCreatedUpToWeek.id),
-		);
+		)
+		
 
-	return {pendingGoals};
+	return { pendingGoals };
 }
